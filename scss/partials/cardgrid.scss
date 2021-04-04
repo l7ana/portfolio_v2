@@ -1,0 +1,64 @@
+/* Work Grid */
+.work {
+  background-color: $white-1;
+  padding: 5em 0;
+  height: auto;
+  h2 {color: $black-2;}
+}
+
+  .card-row {
+    margin: 0 auto;
+    // border: 1px solid blue;
+  }
+
+  .card {
+    transition: all .3s ease;
+    margin: 1% 0%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    &:nth-child(2) {margin-right: 1%;}
+    img {
+      display: block;
+      background-color: rgb(255, 255, 255);
+    }
+    .card-info { 
+        padding: 30px;
+        background-color: rgb(255, 255, 255);
+        flex-grow: 1;
+     }
+  }
+
+  .card:hover {
+    cursor: pointer;
+    h3 {color: $turq;}
+    box-shadow: 3px 7px 10px rgba($grey-1,.5), 0 10px 10px rgba($grey-1,0.1);
+  }
+  
+
+  @media (min-width: 768px) {
+    .card-row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }  
+      .card.horizontal {
+        flex-direction: row;
+      } 
+  }
+
+  @media (min-width: 768px) {
+    .card {
+      // transition: .4s all ease;
+        width: 31%;
+        h3, p {color: $navy-2;}
+      }
+    .card.horizontal {
+        width: 100%;
+        display: flex;
+        margin: 2% 0;
+        .card-img,
+        .card-info {width: 100%;}
+    }
+  }
