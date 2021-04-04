@@ -6,7 +6,7 @@ a.button-gold {
   border: 1px solid rgba(0,0,0,0);
   display: inline-block;
   width: fit-content;
-  padding: .75em 1em;
+  padding: .8em 1em .7em 1em;
   text-decoration: none;
   margin: 1em 1em 1.5em 0;
   text-decoration: none;
@@ -128,6 +128,7 @@ a.button {
     }
   }
 
+  // Scroll Butons
   .arrow-down {
     z-index: 2;
     position: absolute;
@@ -170,3 +171,42 @@ a.button {
   // .arrow-down:hover {
   //   text-shadow: 2px 2px 10px $grey-3;
   // }
+  .scroll-top {
+    z-index: 2;
+    position: absolute;
+    // // border: 1px solid red;
+    // width: 100%;
+    // text-align: center;
+    bottom: 1em; left: 0;
+    a {
+      color:black;
+      text-decoration: none;
+      letter-spacing: 1px;
+      font-family: $type-subhead;
+      // font-feature-settings: 'smcp';
+      text-transform: uppercase;
+      transition: all .7s ease-in-out;
+      &:hover {
+        text-shadow: 2px 2px 10px $grey-3;
+      }
+    }
+    svg {
+      display: block;
+      margin: .5em auto;
+      margin-top: 1.75em;
+      animation: down-arrow 3s cubic-bezier(0.25,0.46,0.45,0.94) both infinite;
+      path {
+        fill: transparent;
+        stroke: black;
+        &:hover {
+          filter: drop-shadow(5px 5px 5px $grey-3);
+        }
+      }
+    }
+  }
+  @keyframes down-arrow {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }

@@ -46,9 +46,9 @@
   }
   p::after {
     content: '';
-    margin-top: 3.7vh;
+    margin-top: 6.8vh;
     height: 6.5vw;
-    width: 100%;
+    width: 80%;
     position: absolute;
     top: 100%;
     left: 0;
@@ -63,13 +63,14 @@
 
 .swiper-textbox {
   position: relative;
-  top: 34%;
+  top: 37%;
   // border: 1px solid red;
   margin: 0;
   left: 9.5%;
-  width: 80%;
+  width: 87.5%;
   // overflow: hidden;
   z-index: 11;
+  .row, .column {margin: 0;}
   h1 { 
     font-size: clamp(1.5em, 7vw, 7em); 
     white-space: nowrap;
@@ -78,6 +79,35 @@
   }
   .subhead {
     margin-top: 1em;
+    font-size: clamp(1em,2vw,2em);
+  }
+  .button {
+    width: 100%;
+    text-align: center;
+    margin: 25% auto;
+    background-color: rgba(white,.3);
+  }
+  .button-white { 
+    background-color: rgba(black,.1);
+    width: 100%;
+    text-align: center;
+    margin: 25% auto;
+  }
+}
+
+#home-swiper {
+  .swiper-button-prev {
+    top: auto;
+    bottom: 52%;
+    left: auto;
+    right: 95%;
+}
+
+.swiper-button-next {
+  top: auto;
+  bottom: 52%;
+  left: 95%;
+  right: auto;
   }
 }
 
