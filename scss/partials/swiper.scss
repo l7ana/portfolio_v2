@@ -26,6 +26,7 @@
   } 
   
 // HERO TYPOGRAPHY
+
 #show-me {
   position: absolute;
   // bottom: 68%;
@@ -46,9 +47,9 @@
   }
   p::after {
     content: '';
-    margin-top: 6.8vh;
+    margin-top: 3.7vh;
     height: 6.5vw;
-    width: 80%;
+    width: 100%;
     position: absolute;
     top: 100%;
     left: 0;
@@ -63,14 +64,13 @@
 
 .swiper-textbox {
   position: relative;
-  top: 37%;
+  top: 34%;
   // border: 1px solid red;
   margin: 0;
   left: 9.5%;
-  width: 87.5%;
+  width: 80%;
   // overflow: hidden;
   z-index: 11;
-  .row, .column {margin: 0;}
   h1 { 
     font-size: clamp(1.5em, 7vw, 7em); 
     white-space: nowrap;
@@ -82,16 +82,16 @@
     font-size: clamp(1em,2vw,2em);
   }
   .button {
-    width: 100%;
+    // width: 100%;
     text-align: center;
-    margin: 25% auto;
+    // margin: 25% auto;
     background-color: rgba(white,.3);
   }
   .button-white { 
     background-color: rgba(black,.1);
-    width: 100%;
+    // width: 100%;
     text-align: center;
-    margin: 25% auto;
+    // margin: 25% auto;
   }
 }
 
