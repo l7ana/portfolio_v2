@@ -178,7 +178,7 @@ a.button {
     text-align: left;
     text-decoration: none;
     a.scroll-text {
-      color:black;
+      color:white;
       display: inline-block;
       text-decoration: none;
       letter-spacing: 1px;
@@ -197,7 +197,7 @@ a.button {
       animation: up-arrow 3s cubic-bezier(0.25,0.46,0.45,0.94) both infinite;
       path {
         fill: transparent;
-        stroke: black;
+        stroke: white;
         &:hover {
           filter: drop-shadow(5px 5px 5px $grey-3);
         }
