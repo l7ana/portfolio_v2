@@ -789,7 +789,7 @@ footer {
 
 .card:hover {
   cursor: pointer;
-  box-shadow: 3px 7px 10px rgba(209, 215, 221, 0.5), 0 10px 10px rgba(209, 215, 221, 0.1);
+  box-shadow: 3px 7px 10px rgba(12, 28, 42, 0.1), 0 10px 10px rgba(12, 28, 42, 0.08);
 }
 .card:hover h3 {
   color: #1D7D77;
@@ -804,7 +804,7 @@ footer {
 }
 
 #branding {
-  background-color: #0C1C2A;
+  background-color: #173753;
 }
 #branding h2 {
   color: white;
