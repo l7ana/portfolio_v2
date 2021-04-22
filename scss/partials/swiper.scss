@@ -1,10 +1,9 @@
 /* Swiper */
-.swiper-container {
+#home-swiper {
+  &.swiper-container {
     width: 100%;
     height: 100%;
     margin: 0;
-    // clip-path: polygon(0% 0%, 100% 0%, 100% 87%, 90% 87%, 50% 100%, 10% 87%, 0% 87%);
-    // clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
   }
   
   .swiper-slide {
@@ -23,116 +22,112 @@
     height: 100%;
     text-align: left;
     // border: 2px solid blue;
-  } 
-  
-// HERO TYPOGRAPHY
-
-#show-me {
-  position: absolute;
-  // bottom: 68%;
-  width: 80%;
-  bottom: 68%;
-  left: 9.5%;
-  z-index: 2;
-  // margin-top: -6em;
-  // border: 1px solid green;
-  p {
-    font-family: $type-body;
-    font-size: clamp(1em, 3vw, 2em);
-    font-weight: 300;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
   }
-  p::after {
-    content: '';
-    margin-top: 3.7vh;
-    height: 6.5vw;
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    max-height: 2.3em;
-    // background-color: pink;
-    border-bottom: 2px solid white;
-    @media (max-width: 388px){
-      border: none;
-    } 
-  }
-}
-
-.swiper-textbox {
-  position: relative;
-  top: 34%;
-  // border: 1px solid red;
-  margin: 0;
-  left: 9.5%;
-  width: 80%;
-  // overflow: hidden;
-  z-index: 11;
-  h1 { 
-    font-size: clamp(1.5em, 7vw, 7em); 
-    white-space: nowrap;
-    margin: 0;
-    padding: 0;
-  }
-  .subhead {
-    margin-top: 1em;
-    font-size: clamp(1em,2vw,2em);
-  }
-  .button {
-    // width: 100%;
-    text-align: center;
-    // margin: 25% auto;
-    background-color: rgba(white,.3);
-  }
-  .button-white { 
-    background-color: rgba(black,.1);
-    // width: 100%;
-    text-align: center;
-    // margin: 25% auto;
-  }
-}
-
-#home-swiper {
   .swiper-button-prev {
     top: auto;
-    bottom: 52%;
+    bottom: 55%;
     left: auto;
     right: 95%;
-}
-
-.swiper-button-next {
+  }
+  .swiper-button-next {
   top: auto;
-  bottom: 52%;
+  bottom: 55%;
   left: 95%;
   right: auto;
   }
-}
 
-  .shabp {
-        box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+  // HERO TYPOGRAPHY
+  #show-me {
+    position: absolute;
+    // bottom: 68%;
+    width: 80%;
+    bottom: 68%;
+    left: 9.5%;
+    z-index: 2;
+    // margin-top: -6em;
+    // border: 1px solid green;
+    p {
+      font-family: $type-body;
+      font-size: clamp(1em, 3vw, 2em);
+      font-weight: 300;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+    p::after {
+      content: '';
+      margin-top: 3.7vh;
+      height: 6.5vw;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      max-height: 2.3em;
+      // background-color: pink;
+      border-bottom: 2px solid;
+      @media (max-width: 388px){
+        border: none;
+      } 
+    }
   }
-  
-  .dark .swiper-image h1,
-  .dark .swiper-image,
-  .dark  {
-    color: white;
+  .swiper-textbox {
+    position: relative;
+    top: 34%;
+    // border: 1px solid red;
+    margin: 0;
+    left: 9.5%;
+    width: 80%;
+    // overflow: hidden;
+    z-index: 11;
+    h1 { 
+      font-size: clamp(1.5em, 7vw, 7em); 
+      white-space: nowrap;
+      margin: 0;
+      padding: 0;
+    }
+    .subhead {
+      margin-top: 1em;
+      font-size: clamp(1em,2vw,2em);
+    }
+    .button {
+      // width: 100%;
+      text-align: center;
+      // margin: 25% auto;
+      background-color: rgba(white,.3);
+    }
+    .button-white { 
+      background-color: rgba(black,.1);
+      // width: 100%;
+      text-align: center;
+      // margin: 25% auto;
+    }
   }
-  
-  .dark .swiper-image .button {
-    color: white;
-    border-color: white;
-  }
+    .shabp {
+      box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+    } 
+    .dark .swiper-image h1,
+    .dark .swiper-image,
+    .dark  {
+      color: white;
+    }
+    
+    .dark .swiper-image .button {
+      color: white;
+      border-color: white;
+    }
+}
 
   // Slider Hero Light/Dark
 
   header[data-slidecolor="light"] a,
-  header[data-slidecolor="light"] svg  
+  header[data-slidecolor="light"] svg,
+  header[data-slidecolor="light"] .site-identity a svg
   {color: rgba(0,0,0,1); }
+
   header[data-slidecolor="dark"] a,
-  header[data-slidecolor="dark"] svg
+  header[data-slidecolor="dark"] svg,
+  header[data-slidecolor="dark"] .site-identity a svg
    {color: rgb(255,255,255);}
 
   [data-slidecolor="light"] .swiper-button-prev,
@@ -154,3 +149,12 @@
   
   [data-slidecolor="light"] #show-me p::after {border-color: rgba(0,0,0,1);}
   [data-slidecolor="dark"] #show-me p::after {border-color: rgb(255, 255, 255);}
+
+
+// Side Scroll Swiper Cards
+  #side-scroll-swiper {
+    .swiper-slide {
+      background: $grey-3;
+      height: 200px;
+    }
+  }
