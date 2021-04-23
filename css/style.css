@@ -1297,16 +1297,16 @@ header[data-slidecolor=dark] .site-identity a svg {
 #swiper-two.swiper-two a {
   text-decoration: none;
 }
-#swiper-two.swiper-two .swiper-pagination-bullet-active {
-  background-color: #1D7D77;
-}
 #swiper-two.swiper-two .swiper-slide {
+  width: 100%;
+  height: 350px;
   background: #D1D7DD;
   display: relative;
+  overflow: hidden;
 }
 #swiper-two.swiper-two .swiper-slide .swiper-image {
-  display: absolute;
-  z-index: 0;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
 }
 #swiper-two.swiper-two .swiper-slide .swiper-info {
   background-color: rgba(12, 28, 42, 0.8);
@@ -1317,8 +1317,8 @@ header[data-slidecolor=dark] .site-identity a svg {
   bottom: 0;
   right: 0;
   z-index: 3;
-  transform: translateY(0);
-  transition: all 0.3s ease-in-out;
+  transform: translateY(0%);
+  transition: all 0.5s ease-in-out;
 }
 #swiper-two.swiper-two .swiper-slide .swiper-info h3 {
   font-family: "kepler-std-semicondensed-cap", serif;
@@ -1326,8 +1326,23 @@ header[data-slidecolor=dark] .site-identity a svg {
   font-weight: 600;
   color: white;
 }
+#swiper-two.swiper-two .swiper-slide .swiper-info h3::after {
+  content: "⟶";
+  padding-left: -2em;
+  opacity: 0.2;
+  color: white;
+  transition: all 0.7s 0.2s ease-in-out;
+}
+#swiper-two.swiper-two .swiper-slide:hover .swiper-image {
+  transform: scale(1.01);
+}
 #swiper-two.swiper-two .swiper-slide:hover .swiper-info {
   transform: translateY(-100%);
+}
+#swiper-two.swiper-two .swiper-slide:hover .swiper-info h3::after {
+  opacity: 1;
+  padding-left: 0.2em;
+  color: #1D7D77;
 }
 
 .card:nth-child(1) {

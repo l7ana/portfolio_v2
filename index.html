@@ -155,7 +155,7 @@
         <div class="container">
             <div class="row">
                 <div class="column one-whole text-centered">
-                    <h2 class="sectionhead">Other Featured Projects</h2>
+                    <h2 class="sectionhead">Other Projects</h2>
                     <p>This pattern provides a spotlight for select projects and a link to "see all projects" which has
                         project cards with meta-tags.</p>
                 </div>
@@ -171,7 +171,9 @@
                             <img src="./img/2x1/natura_2x1.jpg" alt="natura insects brochure">
                         </div>
                         <div class="swiper-info">
-                            <h3>Natura Insects Exhibit Brochure</h3>
+                            <a href="natura-brochure.html" class="arrow-link">
+                                <h3>Natura Insects Exhibit Brochure</h3>
+                            </a>
                         </div>
                     </a>
                 </div>
@@ -186,22 +188,28 @@
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="natura-brochure.html">
+                    <a href="fohr.html">
                         <div class="swiper-image">
-                            <img src="./img/2x1/natura_2x1.jpg" alt="natura insects brochure">
+                            <img src="./img/2x1/fohr_mockup_2x1.jpg" alt="friends of hawaii robotics">
+                        </div>
+                        <div class="swiper-info">
+                            <h3>Friends of Hawai&#8216;i Robotics UI</h3>
                         </div>
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="twoladies.html">
+                    <a href="copenhagen-logo.html">
                         <div class="swiper-image">
-                            <img src="./img/2x1/2ladiesbox_2x1.jpg" alt="Two Ladies Kitchen Box">
+                            <img src="./img/copenhagen-logo/copenlogo_2ver.svg" alt="Copenhagen City Tourism Logo">
+                        </div>
+                        <div class="swiper-info">
+                            <h3>Copenhagen City Tourism Logo</h3>
                         </div>
                     </a>
                 </div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+            <!-- ScrollBar -->
+            <div class="swiper-scrollbar"></div>
         </div>
 
         <div class="container">
@@ -338,12 +346,12 @@
         var swiper2 = new Swiper('#swiper-two', {
             slidesPerView: 2,
             spaceBetween: 0,
-            mousewheel: true,
+            // mousewheel: true,
             freeMode: true,
-            pagination: {
-                el: '.swiper-pagination',
-                dynamicBullets: true,
-            }
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: true,
+            },
         });
 
     </script>
