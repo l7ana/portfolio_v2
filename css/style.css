@@ -1290,9 +1290,44 @@ header[data-slidecolor=dark] .site-identity a svg {
   border-color: white;
 }
 
+#swiper-two.swiper-two {
+  width: 100%;
+  height: 350px;
+}
+#swiper-two.swiper-two a {
+  text-decoration: none;
+}
+#swiper-two.swiper-two .swiper-pagination-bullet-active {
+  background-color: #1D7D77;
+}
 #swiper-two.swiper-two .swiper-slide {
   background: #D1D7DD;
-  display: flex;
+  display: relative;
+}
+#swiper-two.swiper-two .swiper-slide .swiper-image {
+  display: absolute;
+  z-index: 0;
+}
+#swiper-two.swiper-two .swiper-slide .swiper-info {
+  background-color: rgba(12, 28, 42, 0.8);
+  height: 20%;
+  width: 100%;
+  padding: 1em;
+  display: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+#swiper-two.swiper-two .swiper-slide .swiper-info h3 {
+  font-family: "kepler-std-semicondensed-cap", serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: white;
+}
+#swiper-two.swiper-two .swiper-slide:hover .swiper-info {
+  transform: translateY(-100%);
 }
 
 .card:nth-child(1) {
