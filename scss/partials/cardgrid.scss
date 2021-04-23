@@ -74,7 +74,7 @@
       overflow: hidden;
       position: relative;
       img {
-        transform: scale(1);
+        transform: scale(1.02);
         transition: transform 1s cubic-bezier(.32,0,.77,1);
         z-index: 2;
       }
@@ -92,6 +92,7 @@
         transform: scale(1.05);
         transform-origin:center;
       }
+      box-shadow: 3px 3px 10px rgba($navy-2,.1), 0 10px 10px rgba($navy-2,0.08);
     }
   }
 
