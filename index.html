@@ -143,7 +143,7 @@
             <p>View my featured project about:</p>
         </div>
         <div class="arrow-down">
-            <a href="#welcome" class="scroll">
+            <a href="#more-work" class="scroll">
                 See More
                 <svg width="26" height="13">
                     <path d="M0,0 L13,13 L26,0" />
@@ -151,25 +151,81 @@
             </a>
         </div>
     </section>
-    <section id="side-scroll-swiper" class="swiper-container">
-        <!-- Side scrolling cards -->
-        <div>
+    <section id="more-work">
+        <div class="container">
+            <div class="row">
+                <div class="column one-whole text-centered">
+                    <h2 class="sectionhead">Other Featured Projects</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-container swiper-two" id="swiper-two">
+            <!-- Side scrolling cards -->
             <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">
+                    <a href="kpc.html">
+                        <div class="swiper-image">
+                            <img src="./img/1x1/copen_1x1.jpg" alt="gem stamps">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="kpc.html">
+                        <div class="swiper-image">
+                            <img src="./img/1x1/copen_1x1.jpg" alt="gem stamps">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="kpc.html">
+                        <div class="swiper-image">
+                            <img src="./img/1x1/copen_1x1.jpg" alt="gem stamps">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="kpc.html">
+                        <div class="swiper-image">
+                            <img src="./img/1x1/copen_1x1.jpg" alt="gem stamps">
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide"> Slide 2 </div>
                 <div class="swiper-slide">Slide 3</div>
                 <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
-                <div class="swiper-slide">Slide 6</div>
-                <div class="swiper-slide">Slide 7</div>
-                <div class="swiper-slide">Slide 8</div>
-                <div class="swiper-slide">Slide 9</div>
-                <div class="swiper-slide">Slide 10</div>
+                <!-- Add Scrollbar -->
+                <div class="swiper-scrollbar"></div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="column one-whole text-centered">
+                    <a href="work.html" class="button-gold">See All Projects</a>
+                </div>
+            </div>
         </div>
     </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="column one-whole">
+                    This pattern would lead to a work page with page anchors or a module tab group
+                </div>
+            </div>
+            <div class="row">
+                <div class="column one-half">Identity Projects</div>
+                <div class="column one-half">Digital Projects</div>
+            </div>
+            <div class="row">
+                <div class="column one-half">Printed Projects</div>
+                <div class="column one-half">See All</div>
+            </div>
+        </div>
+    </section>
+
     <section id="welcome">
         <div class="container">
             <div class="row">
@@ -256,24 +312,11 @@
                 },
             },
         });
-        var swiper2 = new Swiper('#side-scroll-swiper', {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            on: {
-                init: function () {
-                    console.log('swiper 2 initialized');
-                }
-            },
-        });
 
         const myswiper = document.querySelector('#home-swiper');
         const myheader = document.querySelector('.site-header');
 
-        swiper.on('transitionEnd', function () {
+        swiper1.on('transitionEnd', function () {
             console.log('slide changed');
             const activeslide = document.querySelector('.swiper-slide-active');
             if (activeslide.classList.contains('dark')) {
@@ -287,6 +330,16 @@
             }
         });
 
+        var swiper2 = new Swiper('#swiper-two', {
+            slidesPerView: 5,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                scrollbar: '.swiper-scrollbar',
+                scrollbarHide: true,
+            }
+        });
 
     </script>
 

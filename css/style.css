@@ -407,6 +407,13 @@ footer {
   transform: scaleX(1);
 }
 
+#more-work {
+  background: #f1f9ff;
+}
+#more-work .sectionhead {
+  margin-top: 2em;
+}
+
 .project-top {
   display: flex;
   flex-direction: column;
@@ -1283,9 +1290,9 @@ header[data-slidecolor=dark] .site-identity a svg {
   border-color: white;
 }
 
-#side-scroll-swiper .swiper-slide {
-  background: #748798;
-  height: 200px;
+#swiper-two.swiper-two .swiper-slide {
+  background: #D1D7DD;
+  display: flex;
 }
 
 .card:nth-child(1) {

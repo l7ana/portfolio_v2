@@ -152,9 +152,12 @@
 
 
 // Side Scroll Swiper Cards
-  #side-scroll-swiper {
+  #swiper-two.swiper-two {
     .swiper-slide {
-      background: $grey-3;
-      height: 200px;
+      background: $grey-1;
+      display: flex;
+      // flex-direction: column;
+      // .swiper-image {width: 50%;}
+      // .swiper-info {width: 50%;}
     }
   }
