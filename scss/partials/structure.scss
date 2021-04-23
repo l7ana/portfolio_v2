@@ -184,10 +184,37 @@ footer {background-color: $navy-2;}
   }
 }
 
-#more-work {
+#more {
   background:$white-1;
   .sectionhead {margin-top: 2em;}
 }
+
+// #more-2 {
+//   background:white;
+//   .sectionhead {margin-top: 2em;}
+//   .rect-button {
+//     width: 50%;
+//     h2 {position: relative;}
+//     h2:after {
+//       display: absolute;
+//       font-size: .7em;
+//       z-index: -1;
+//       content: '\27F6';
+//       opacity: 0;
+//       padding-left: 0;
+//       transition: all .5s ease-in-out;
+//       color: currentColor;
+//     }
+//     h2:hover:after {
+//       opacity: .5;
+//       padding-left: .5em;
+//     }
+//   }
+//   #identity h2 {color: $rust;}
+//   #digital h2 {color: $turq; background: none;}
+//   #print h2 {color: $gold;}
+//   #all h2 {color: $navy;}
+// }
 
 
 // Project Pages

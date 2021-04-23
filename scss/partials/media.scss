@@ -30,6 +30,13 @@ video.video-bg {
     z-index: 10;
 }
 
+lottie-player.video-bg {
+    object-fit: cover;
+    position: absolute;
+    top:10%; left:45%;
+    z-index: 10;
+}
+
 #kpc-ani {
     img {
         height: auto;
