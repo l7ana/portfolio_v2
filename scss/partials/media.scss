@@ -19,6 +19,7 @@ img {
 
 .video-bg-top {
     z-index: 20;
+    position: relative;
 }
     
 video.video-bg {
@@ -43,6 +44,17 @@ lottie-player.video-bg {
         // border: 1px solid blue;
     }
 }
+
+#kpc-intro {
+    position: relative;
+    .kpc-video video {
+        width: 70%;
+        position: absolute;
+        z-index: -2;
+        bottom: -10%; left: 12%;
+    }
+}
+
 
 .imac-mockup {
     background-image: url(../img/imac.png);

@@ -181,6 +181,7 @@ img {
 
 .video-bg-top {
   z-index: 20;
+  position: relative;
 }
 
 video.video-bg {
@@ -203,6 +204,17 @@ lottie-player.video-bg {
 
 #kpc-ani img {
   height: auto;
+}
+
+#kpc-intro {
+  position: relative;
+}
+#kpc-intro .kpc-video video {
+  width: 70%;
+  position: absolute;
+  z-index: -2;
+  bottom: -10%;
+  left: 12%;
 }
 
 .imac-mockup {
@@ -422,6 +434,39 @@ footer {
   margin-top: 2em;
 }
 
+.cta-link-to {
+  height: auto;
+  padding: 4em 0 2.5em 0;
+  display: flex;
+  justify-content: center;
+}
+.cta-link-to a {
+  text-decoration: none;
+}
+.cta-link-to h3 {
+  font-size: 5em;
+  font-family: "kepler-std-display", serif;
+  display: relative;
+}
+.cta-link-to h3:after {
+  display: absolute;
+  font-size: 0.75em;
+  z-index: -1;
+  content: "⟶";
+  opacity: 0;
+  padding-left: 0;
+  transition: all 0.5s ease-in-out;
+  color: currentColor;
+}
+
+.cta-link-to:hover {
+  cursor: pointer;
+}
+.cta-link-to:hover h3:after {
+  opacity: 0.5;
+  padding-left: 0.5em;
+}
+
 .project-top {
   display: flex;
   flex-direction: column;
@@ -468,6 +513,10 @@ footer {
   background: #f1f9ff;
 }
 
+#kpc-intro .row {
+  margin-bottom: 15%;
+}
+
 .project-top.kpc {
   background-image: url("../img/kpc/ani/chameleon_small.gif");
   background-size: auto;
@@ -477,15 +526,11 @@ footer {
 
 #kpc-to-slider {
   background-image: linear-gradient(white, #ebf5f7);
-  margin: 0;
+  margin: 7em 0 0 0;
 }
 
 #kpc-notes {
-  background-image: url(../img/kpc/mushu.png);
-  background-size: 370px;
-  background-repeat: no-repeat;
   margin-bottom: 0;
-  background-position: left bottom;
 }
 
 #kpc-ani {
@@ -502,15 +547,11 @@ footer {
   margin-top: -1em;
 }
 
-#kpc-bottom {
-  height: auto;
-  padding: 2em 0 1em 0;
-  display: flex;
-  justify-content: center;
+#kpc-cta {
   text-align: center;
   background-color: #ff6e6d;
 }
-#kpc-bottom h3 {
+#kpc-cta h3 {
   margin: 0;
   color: white;
 }
@@ -1034,64 +1075,26 @@ a.button-white:hover {
   outline-color: rgba(168, 143, 30, 0);
 }
 
-/* Swiper Buttons */
-.swiper-button-prev {
+.button-gold.blink {
   color: white;
-  top: 56%;
-  left: auto;
-  right: 17%;
+  background-color: #A88F1E;
+  box-shadow: inset 0 0 20px rgba(84, 71, 15, 0);
+  border: 1px solid;
+  outline-offset: 10px;
+  outline-color: rgba(168, 143, 30, 0.3);
+  animation: blink 1s ease-in-out both infinite;
+  transition: transform 0.5s ease-in-out;
+  margin: 2em auto;
 }
 
-.swiper-button-next {
-  color: white;
-  top: 56%;
-  left: auto;
-  right: 12%;
+@keyframes blink {
+  from {
+    outline-offset: 0;
+    outline-color: rgba(168, 143, 30, 0);
+  }
 }
-
-.swiper-button-next:after, .swiper-button-prev:after {
-  font-size: 1.5em;
-}
-
-.case-study .swiper-button-prev {
-  color: #1D7D77;
-  top: auto;
-  bottom: 5%;
-  left: auto;
-  right: 15%;
-}
-.case-study .swiper-button-next {
-  color: #1D7D77;
-  top: auto;
-  bottom: 5%;
-  left: auto;
-  right: 10%;
-}
-
-#natura-swiper .swiper-button-prev {
-  top: auto;
-  bottom: 50%;
-  left: auto;
-  right: 95%;
-}
-#natura-swiper .swiper-button-next {
-  top: auto;
-  bottom: 50%;
-  left: 95%;
-  right: auto;
-}
-
-#prime-swiper .swiper-button-prev {
-  top: auto;
-  bottom: 45%;
-  left: auto;
-  right: 95%;
-}
-#prime-swiper .swiper-button-next {
-  top: auto;
-  bottom: 45%;
-  left: 95%;
-  right: auto;
+.button-gold.blink:hover {
+  transform: scale(1.05);
 }
 
 .arrow-down {
@@ -1369,6 +1372,70 @@ header[data-slidecolor=dark] .site-identity a svg {
   opacity: 1;
   padding-left: 0.2em;
   color: #1D7D77;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #1D7D77;
+}
+
+/* Swiper Buttons */
+.swiper-button-prev {
+  color: white;
+  top: 56%;
+  left: auto;
+  right: 17%;
+}
+
+.swiper-button-next {
+  color: white;
+  top: 56%;
+  left: auto;
+  right: 12%;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 1.5em;
+}
+
+.case-study .swiper-button-prev {
+  color: #1D7D77;
+  top: auto;
+  bottom: 5%;
+  left: auto;
+  right: 15%;
+}
+.case-study .swiper-button-next {
+  color: #1D7D77;
+  top: auto;
+  bottom: 5%;
+  left: auto;
+  right: 10%;
+}
+
+#natura-swiper .swiper-button-prev {
+  top: auto;
+  bottom: 50%;
+  left: auto;
+  right: 95%;
+}
+#natura-swiper .swiper-button-next {
+  top: auto;
+  bottom: 50%;
+  left: 95%;
+  right: auto;
+}
+
+#prime-swiper .swiper-button-prev {
+  top: auto;
+  bottom: 45%;
+  left: auto;
+  right: 95%;
+}
+#prime-swiper .swiper-button-next {
+  top: auto;
+  bottom: 45%;
+  left: 95%;
+  right: auto;
 }
 
 .card:nth-child(1) {

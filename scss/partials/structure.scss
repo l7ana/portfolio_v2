@@ -189,33 +189,36 @@ footer {background-color: $navy-2;}
   .sectionhead {margin-top: 2em;}
 }
 
-// #more-2 {
-//   background:white;
-//   .sectionhead {margin-top: 2em;}
-//   .rect-button {
-//     width: 50%;
-//     h2 {position: relative;}
-//     h2:after {
-//       display: absolute;
-//       font-size: .7em;
-//       z-index: -1;
-//       content: '\27F6';
-//       opacity: 0;
-//       padding-left: 0;
-//       transition: all .5s ease-in-out;
-//       color: currentColor;
-//     }
-//     h2:hover:after {
-//       opacity: .5;
-//       padding-left: .5em;
-//     }
-//   }
-//   #identity h2 {color: $rust;}
-//   #digital h2 {color: $turq; background: none;}
-//   #print h2 {color: $gold;}
-//   #all h2 {color: $navy;}
-// }
+.cta-link-to {
+  height: auto;
+  padding: 4em 0 2.5em 0;
+  display: flex;
+  justify-content: center;
+  a {text-decoration: none;}
+  h3 {
+    font-size: 5em;
+    font-family: $type-heading;
+    display: relative;
+  }
+  h3:after {
+    display: absolute;
+    font-size: .75em;
+    z-index: -1;
+    content: '\27F6';
+    opacity: 0;
+    padding-left: 0;
+    transition: all .5s ease-in-out;
+    color: currentColor;
+  }
+}
 
+.cta-link-to:hover {
+  cursor: pointer;
+  h3:after {
+    opacity: .5;
+    padding-left: .5em;
+  }
+}
 
 // Project Pages
 
@@ -255,7 +258,9 @@ footer {background-color: $navy-2;}
 .white-bg {background: $white-1;}
 
 // KPC
-
+#kpc-intro {
+  .row {margin-bottom: 15%;}
+}
 .project-top.kpc {
   background-image: url('../img/kpc/ani/chameleon_small.gif');
   background-size: auto;
@@ -266,15 +271,15 @@ footer {background-color: $navy-2;}
 
 #kpc-to-slider {
   background-image: linear-gradient(white, rgb(235,245,247));
-  margin: 0;
+  margin: 7em 0 0 0;
 }
 
 #kpc-notes {
-  background-image: url(../img/kpc/mushu.png);
-  background-size: 370px;
-  background-repeat: no-repeat;
+  // background-image: url(../img/kpc/mushu.png);
+  // background-size: 370px;
+  // background-repeat: no-repeat;
   margin-bottom: 0;
-  background-position: left bottom;
+  // background-position: left bottom;
 }
 
 #kpc-ani {
@@ -287,11 +292,7 @@ footer {background-color: $navy-2;}
   p.caption {margin-top: -1em;}
 }
 
-#kpc-bottom {
-  height: auto;
-  padding: 2em 0 1em 0;
-  display: flex;
-  justify-content: center;
+#kpc-cta {
   text-align: center;
   background-color:#ff6e6d;
   h3 {

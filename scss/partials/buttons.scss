@@ -58,74 +58,30 @@ a.button {
   .button-gold:hover {
     outline-color: rgba($gold,0);
   }
-  
-  
-  /* Swiper Buttons */
-  .swiper-button-prev {
-      color: rgba(255,255,255,1);
-      top: 56%;
-      left: auto;
-      right: 17%;
-  }
-  
-  .swiper-button-next {
-    color: rgba(255,255,255,1);
-    top: 56%;
-    left: auto;
-    right: 12%;
-  }
-  
-  .swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 1.5em;
-  }
 
-  .case-study {
-    .swiper-button-prev {
-      color: $turq;
-      top: auto;
-      bottom: 5%;
-      left: auto;
-      right: 15%;
-  }
-  .swiper-button-next {
-    color: $turq;
-    top: auto;
-    bottom: 5%;
-    left: auto;
-    right: 10%;
+  .button-gold.blink {
+    color: white;
+    background-color: $gold;
+    box-shadow: inset 0 0 20px rgba($gold-2,0);
+    border: 1px solid;
+    outline-offset: 10px;
+    outline-color: rgba($gold,.3);
+    animation: blink 1s ease-in-out both infinite;
+    transition: transform .5s ease-in-out;
+    margin: 2em auto;
+  } 
+
+  @keyframes blink {
+    from {
+      outline-offset: 0;
+      outline-color: rgba($gold,0);
     }
   }
 
-  #natura-swiper {
-    .swiper-button-prev {
-      top: auto;
-      bottom: 50%;
-      left: auto;
-      right: 95%;
+  .button-gold.blink:hover {
+    transform: scale(1.05);
   }
-  .swiper-button-next {
-    top: auto;
-    bottom: 50%;
-    left: 95%;
-    right: auto;
-    }
-  }
-
-  #prime-swiper {
-    .swiper-button-prev {
-      top: auto;
-      bottom: 45%;
-      left: auto;
-      right: 95%;
-  }
-  .swiper-button-next {
-    top: auto;
-    bottom: 45%;
-    left: 95%;
-    right: auto;
-    }
-  }
-
+  
   // Scroll Butons
   .arrow-down {
     z-index: 2;

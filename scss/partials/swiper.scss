@@ -198,3 +198,72 @@
       }
     }
   }
+
+  // Case study swiper
+  .swiper-pagination-bullet-active {background-color: $turq;}
+
+  /* Swiper Buttons */
+  .swiper-button-prev {
+    color: rgba(255,255,255,1);
+    top: 56%;
+    left: auto;
+    right: 17%;
+}
+
+.swiper-button-next {
+  color: rgba(255,255,255,1);
+  top: 56%;
+  left: auto;
+  right: 12%;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 1.5em;
+}
+
+.case-study {
+  .swiper-button-prev {
+    color: $turq;
+    top: auto;
+    bottom: 5%;
+    left: auto;
+    right: 15%;
+}
+.swiper-button-next {
+  color: $turq;
+  top: auto;
+  bottom: 5%;
+  left: auto;
+  right: 10%;
+  }
+}
+
+#natura-swiper {
+  .swiper-button-prev {
+    top: auto;
+    bottom: 50%;
+    left: auto;
+    right: 95%;
+}
+.swiper-button-next {
+  top: auto;
+  bottom: 50%;
+  left: 95%;
+  right: auto;
+  }
+}
+
+#prime-swiper {
+  .swiper-button-prev {
+    top: auto;
+    bottom: 45%;
+    left: auto;
+    right: 95%;
+}
+.swiper-button-next {
+  top: auto;
+  bottom: 45%;
+  left: 95%;
+  right: auto;
+  }
+}
