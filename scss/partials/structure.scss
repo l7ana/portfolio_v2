@@ -89,7 +89,7 @@ header a {
   background-color: $navy;
   height: auto;
   margin: 0 auto;
-  padding: 5em 0 2.5em 0;
+  padding: 3em 0 1em 0;
   .sectionhead {
     color: $navy-3;
     line-height: 0;
@@ -187,10 +187,15 @@ footer {background-color: $navy-2;}
 #more {
   background:$white-1;
   height: auto;
-  padding: 2em 0 0 0;
+  padding: 2em 0;
   .sectionhead {margin-top: 2em;}
-  hr {margin: 3em 0 1em 0;}
-  .swiper-two {margin-top: 1em;}
+  .card-row {margin-bottom: 4em;}
+}
+#other {
+  background: rgba($white-1,.7);
+  height: auto;
+  padding: 2em 0;
+  .sectionhead {margin-top: 2em;}
 }
 
 .cta-link-to {
@@ -198,11 +203,13 @@ footer {background-color: $navy-2;}
   padding: 4em 0 2.5em 0;
   display: flex;
   justify-content: center;
+  background-color: $turq;
   a {text-decoration: none;}
   h3 {
     font-size: 5em;
     font-family: $type-heading;
     display: relative;
+    color: white;
   }
   h3:after {
     display: absolute;

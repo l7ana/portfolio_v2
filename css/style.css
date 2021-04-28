@@ -334,7 +334,7 @@ header a {
   background-color: #173753;
   height: auto;
   margin: 0 auto;
-  padding: 5em 0 2.5em 0;
+  padding: 3em 0 1em 0;
 }
 #welcome .sectionhead {
   color: #4D6B85;
@@ -431,16 +431,22 @@ footer {
 #more {
   background: #f1f9ff;
   height: auto;
-  padding: 2em 0 0 0;
+  padding: 2em 0;
 }
 #more .sectionhead {
   margin-top: 2em;
 }
-#more hr {
-  margin: 3em 0 1em 0;
+#more .card-row {
+  margin-bottom: 4em;
 }
-#more .swiper-two {
-  margin-top: 1em;
+
+#other {
+  background: rgba(241, 249, 255, 0.7);
+  height: auto;
+  padding: 2em 0;
+}
+#other .sectionhead {
+  margin-top: 2em;
 }
 
 .cta-link-to {
@@ -448,6 +454,7 @@ footer {
   padding: 4em 0 2.5em 0;
   display: flex;
   justify-content: center;
+  background-color: #1D7D77;
 }
 .cta-link-to a {
   text-decoration: none;
@@ -456,6 +463,7 @@ footer {
   font-size: 5em;
   font-family: "kepler-std-display", serif;
   display: relative;
+  color: white;
 }
 .cta-link-to h3:after {
   display: absolute;
@@ -1451,6 +1459,7 @@ header[data-slidecolor=dark] .site-identity a svg {
 #swiper-two.swiper-two {
   width: 100%;
   height: 250px;
+  margin: 2em 0 0 0;
 }
 @media (max-width: 768px) {
   #swiper-two.swiper-two {
