@@ -187,17 +187,10 @@ footer {background-color: $navy-2;}
 #more {
   background:$white-1;
   height: auto;
-  padding: 2em 0;
+  padding: 2em 0 0 0;
   .sectionhead {margin-top: 2em;}
-}
-
-#other {
-  // background:$grey-3;
-  height: auto;
-  padding: 0;
-  // color: white;
-  .sectionhead {margin-top: 2em;}
-  .swiper-two {margin-top: 2em;}
+  hr {margin: 3em 0 1em 0;}
+  .swiper-two {margin-top: 1em;}
 }
 
 .cta-link-to {

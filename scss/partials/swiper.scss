@@ -29,9 +29,16 @@
     bottom: 55%;
     left: auto;
     right: 95%;
-    animation: swiper-prev 2s cubic-bezier(0.25,0.46,0.45,0.94) both infinite;
+    animation: swiper-prev 2s cubic-bezier(0.25,0.46,0.45,0.94) forwards infinite;
     opacity: 1;
     transform: translateX(0px) scale(1);
+    &.prev-1 {
+      right: 94%;
+      font-size: 1.2em;
+      opacity: .7;
+      animation: swiper-prev 2s cubic-bezier(0.25,0.46,0.45,0.94) forwards infinite;
+      animation-delay: .5s;
+    }
   }
   .swiper-button-next {
     font-size: 1.5em;
@@ -39,20 +46,52 @@
     bottom: 55%;
     left: 95%;
     right: auto;
-    animation: swiper-next 2s cubic-bezier(0.25,0.46,0.45,0.94) both infinite;
+    animation: swiper-next 2s cubic-bezier(0.25,0.46,0.45,0.94) forwards infinite;
     opacity: 1;
     transform: translateX(0px) scale(1);
+    &.next-1 {
+      left: 94%;
+      font-size: 1.2em;
+      opacity: .7;
+      animation: swiper-next 2s cubic-bezier(0.25,0.46,0.45,0.94) forwards infinite;
+      animation-delay: .5s;
+    }
   }
+
   @keyframes swiper-prev {
-    from {
+    0% {
       opacity: 0;
-      transform: translateX(10px)scale(.9);
+      transform: translateX(15px) scale(.9);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+    70% {
+      opacity: 0;
+      transform: translateX(0px) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(0px) scale(1);
     }
   }
   @keyframes swiper-next {
-    from {
+    0% {
       opacity: 0;
-      transform: translateX(-10px)scale(.9);
+      transform: translateX(-15px) scale(.9);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+    70% {
+      opacity: 0;
+      transform: translateX(0px) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(0px) scale(1);
     }
   }
 
