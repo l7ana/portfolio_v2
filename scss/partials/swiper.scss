@@ -54,10 +54,16 @@
       margin: 0;
       padding: 0;
       line-height: 1;
+      strong {
+        font-family: $type-subhead;
+        font-style: italic;
+        font-weight: 500;
+        font-size: clamp(1em, 2.2vw, 2em);
+      }
     }
     p::after {
       content: '';
-      margin-top: 3.7vh;
+      margin-top: 4vh;
       height: 6.5vw;
       width: 100%;
       position: absolute;
@@ -150,11 +156,15 @@
 
 // Side Scroll Swiper Cards
   #swiper-two.swiper-two {
-    width: 100%; height: 350px;
+    @media (max-width: 768px) {
+      width: 100%; height: 100px;
+      .swiper-slide {height: 100px;}
+      .swiper-info {height: 15%;}
+    }
+    width: 100%; height: 250px;
     a {text-decoration: none;}
-    // .swiper-pagination-bullet-active {background-color:$turq;}
     .swiper-slide {
-      width: 100%; height: 350px;
+      width: 100%; height: 250px;
       background: $grey-1;
       display: relative;
       overflow: hidden;
@@ -164,7 +174,7 @@
       }
       .swiper-info {
         background-color: rgba($navy-2, .8);
-        height: 20%; width: 100%;
+        height: 15%; width: 100%;
         padding: 1em;
         display: absolute;
         bottom: 0; right: 0; 
