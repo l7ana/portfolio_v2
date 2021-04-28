@@ -24,16 +24,36 @@
     // border: 2px solid blue;
   }
   .swiper-button-prev {
+    font-size: 1.5em;
     top: auto;
     bottom: 55%;
     left: auto;
     right: 95%;
+    animation: swiper-prev 2s cubic-bezier(0.25,0.46,0.45,0.94) both infinite;
+    opacity: 1;
+    transform: translateX(0px) scale(1);
   }
   .swiper-button-next {
-  top: auto;
-  bottom: 55%;
-  left: 95%;
-  right: auto;
+    font-size: 1.5em;
+    top: auto;
+    bottom: 55%;
+    left: 95%;
+    right: auto;
+    animation: swiper-next 2s cubic-bezier(0.25,0.46,0.45,0.94) both infinite;
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+  @keyframes swiper-prev {
+    from {
+      opacity: 0;
+      transform: translateX(10px)scale(.9);
+    }
+  }
+  @keyframes swiper-next {
+    from {
+      opacity: 0;
+      transform: translateX(-10px)scale(.9);
+    }
   }
 
   // HERO TYPOGRAPHY
@@ -101,12 +121,32 @@
       text-align: center;
       // margin: 25% auto;
       background-color: rgba(white,.3);
+      border: 1px solid;
+      outline-offset: 10px;
+      outline-color: rgba(black,.3);
+      animation: blink 1s ease-in-out both infinite;
+      transition: transform .5s ease-in-out;
     }
     .button-white { 
       background-color: rgba(black,.1);
-      // width: 100%;
       text-align: center;
-      // margin: 25% auto;
+      border: 1px solid;
+      outline-offset: 10px;
+      outline-color: rgba(white,.3);
+      animation: blink-white 1s ease-in-out both infinite;
+      transition: transform .5s ease-in-out;
+    }
+    @keyframes blink {
+      from {
+        outline-offset: 0;
+        outline-color: rgba(black,0);
+      }
+    }
+    @keyframes blink-white {
+      from {
+        outline-offset: 0;
+        outline-color: rgba(white,0);
+      }
     }
   }
     .dark .swiper-image h1,

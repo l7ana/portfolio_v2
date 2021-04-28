@@ -66,12 +66,12 @@ a.button {
     border: 1px solid;
     outline-offset: 10px;
     outline-color: rgba($gold,.3);
-    animation: blink 1s ease-in-out both infinite;
+    animation: blink-gold 1s ease-in-out both infinite;
     transition: transform .5s ease-in-out;
     margin: 2em auto;
   } 
 
-  @keyframes blink {
+  @keyframes blink-gold {
     from {
       outline-offset: 0;
       outline-color: rgba($gold,0);
